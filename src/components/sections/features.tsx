@@ -19,7 +19,7 @@ const FEATURES = [
   {
     title: "Group Matching",
     description:
-      "No one sees what others picked until there's a match. Honest, bias-free choices every time.",
+      "No one sees what others picked until there's a match. Easily find what everyone actually wants to watch.",
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" />
@@ -29,7 +29,7 @@ const FEATURES = [
   {
     title: "Movies & TV",
     description:
-      "Comprehensive catalog covering everything from blockbusters to indie gems, series to documentaries.",
+      "Comprehensive catalog covering everything, on the streaming services you already have.",
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18" />
@@ -60,9 +60,9 @@ const FEATURES = [
     ),
   },
   {
-    title: "No Spoilers, No Bias",
+    title: "Open Pods",
     description:
-      "Blind swiping means nobody influences anyone else's picks. Pure, unbiased preferences.",
+      "See what's trending with people who share your taste.",
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
@@ -100,7 +100,7 @@ export function Features() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-[family-name:var(--font-space)] text-4xl md:text-5xl font-bold text-white tracking-tight"
           >
-            Built for movie lovers
+            Built for entertainment lovers
           </motion.h2>
         </div>
 
@@ -117,8 +117,9 @@ export function Features() {
                 delay: index * 0.1,
                 ease: "easeOut",
               }}
+              className="h-full"
             >
-              <GlowCard>
+              <GlowCard className="h-full">
                 <div className="mb-5 text-coral group-hover:text-coral-light transition-colors">
                   {feature.icon}
                 </div>

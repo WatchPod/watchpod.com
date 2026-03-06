@@ -9,13 +9,19 @@ const FOOTER_LINKS = [
       { label: "Pods", href: "#pods" },
     ],
   },
+  {
+    heading: "Contact",
+    links: [
+      { label: "feedback@watchpod.com", href: "mailto:feedback@watchpod.com" },
+    ],
+  },
 ];
 
 export function Footer() {
   return (
     <footer className="relative border-t border-white/5">
       <div className="mx-auto max-w-6xl px-6 py-16">
-        <div className="grid sm:grid-cols-2 gap-12">
+        <div className="grid sm:grid-cols-3 gap-12">
           {/* Brand */}
           <div>
             <Image

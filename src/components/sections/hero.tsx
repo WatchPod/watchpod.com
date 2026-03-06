@@ -52,8 +52,8 @@ function FloatingPaths({ position }: { position: number }) {
 export function Hero() {
   const titleLine1 = "What should";
   const titleLine2Words = [
-    { text: "we", color: "text-white" },
-    { text: "watch", color: "text-coral" },
+    { text: "we", color: "text-coral" },
+    { text: "watch", color: "text-white" },
     { text: "tonight?", color: "text-white" },
   ];
 

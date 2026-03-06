@@ -18,8 +18,8 @@ const STEPS = [
         strokeLinecap="round"
         strokeLinejoin="round"
       >
-        <rect x="2" y="3" width="20" height="14" rx="2" />
-        <path d="M8 21h8M12 17v4" />
+        <rect x="5" y="1" width="14" height="22" rx="3" />
+        <path d="M12 18h.01" />
       </svg>
     ),
   },
@@ -83,7 +83,7 @@ export function HowItWorks() {
             How It Works
           </p>
           <h2 className="font-[family-name:var(--font-space)] text-4xl md:text-5xl font-bold text-white tracking-tight">
-            Three steps to movie night
+            Three steps to your next watch
           </h2>
         </div>
 
