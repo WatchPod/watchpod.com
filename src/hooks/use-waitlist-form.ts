@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useSyncExternalStore } from "react";
 
 interface WaitlistFormState {
   email: string;
@@ -11,9 +11,28 @@ interface WaitlistFormState {
   handleSubmit: (e: React.FormEvent) => void;
 }
 
+let globalSubmitted = false;
+const listeners = new Set<() => void>();
+
+function subscribe(listener: () => void) {
+  listeners.add(listener);
+  return () => listeners.delete(listener);
+}
+
+function getSnapshot() {
+  return globalSubmitted;
+}
+
+function markSubmitted() {
+  globalSubmitted = true;
+  for (const listener of listeners) {
+    listener();
+  }
+}
+
 export function useWaitlistForm(source: string): WaitlistFormState {
   const [email, setEmail] = useState("");
-  const [submitted, setSubmitted] = useState(false);
+  const submitted = useSyncExternalStore(subscribe, getSnapshot, getSnapshot);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
@@ -40,7 +59,7 @@ export function useWaitlistForm(source: string): WaitlistFormState {
         body: JSON.stringify({ email, source }),
       });
 
-      setSubmitted(true);
+      markSubmitted();
     } catch {
       setError("Something went wrong. Try again.");
     } finally {
