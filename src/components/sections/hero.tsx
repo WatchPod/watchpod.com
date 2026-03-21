@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useWaitlistForm } from "@/hooks/use-waitlist-form";
 
 function FloatingPaths({ position }: { position: number }) {
   const paths = Array.from({ length: 36 }, (_, i) => ({
@@ -50,6 +51,9 @@ function FloatingPaths({ position }: { position: number }) {
 }
 
 export function Hero() {
+  const { email, setEmail, submitted, loading, error, handleSubmit } =
+    useWaitlistForm("hero");
+
   const titleLine1 = "What should";
   const titleLine2Words = [
     { text: "we", color: "text-coral" },
@@ -161,6 +165,47 @@ export function Hero() {
           Swipe on movies and shows you love, connect with your crew,
           and instantly discover what everyone wants to watch.
         </motion.p>
+
+        {/* Waitlist signup */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.6, duration: 0.8 }}
+          className="mt-8"
+        >
+          {submitted ? (
+            <p className="text-coral text-sm font-medium">
+              You&rsquo;re on the list! We&rsquo;ll be in touch.
+            </p>
+          ) : (
+            <form
+              onSubmit={handleSubmit}
+              className="flex flex-col sm:flex-row items-center gap-3 max-w-md mx-auto"
+            >
+              <input
+                type="email"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Enter your email"
+                className="w-full sm:flex-1 px-4 py-3 rounded-xl bg-white/[0.05] border border-white/10 text-white placeholder:text-white/30 text-sm focus:outline-none focus:border-coral/50 focus:ring-1 focus:ring-coral/30 transition-colors"
+              />
+              <button
+                type="submit"
+                disabled={loading}
+                className="w-full sm:w-auto px-6 py-3 rounded-xl bg-coral text-white text-sm font-semibold hover:bg-coral-light transition-colors shrink-0 disabled:opacity-50"
+              >
+                {loading ? "Joining..." : "Join the Waitlist"}
+              </button>
+            </form>
+          )}
+          {error && (
+            <p className="mt-3 text-red-400 text-sm">{error}</p>
+          )}
+          <p className="mt-3 text-[11px] text-white">
+            No spam, no selling your info. Just WatchPod stuff, promise.
+          </p>
+        </motion.div>
 
         {/* Scroll indicator */}
         <motion.div
