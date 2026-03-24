@@ -6,7 +6,7 @@ const STEPS = [
     number: "01",
     title: "Swipe",
     description:
-      "Browse through movies and TV shows, swiping right on anything that catches your eye. Build your personal watchlist effortlessly.",
+      "Browse through movies and TV show recommendations personalized for you, swiping right on anything that catches your eye. Build your personal watchlist effortlessly.",
     icon: (
       <svg
         width="32"
