@@ -4,9 +4,9 @@ const FOOTER_LINKS = [
   {
     heading: "Product",
     links: [
-      { label: "How It Works", href: "#how-it-works" },
-      { label: "Features", href: "#features" },
-      { label: "Pods", href: "#pods" },
+      { label: "How It Works", href: "/#how-it-works" },
+      { label: "Features", href: "/#features" },
+      { label: "Pods", href: "/#pods" },
     ],
   },
   {
@@ -15,13 +15,17 @@ const FOOTER_LINKS = [
       { label: "feedback@watchpod.com", href: "mailto:feedback@watchpod.com" },
     ],
   },
+  {
+    heading: "Legal",
+    links: [{ label: "Privacy Policy", href: "/privacy" }],
+  },
 ];
 
 export function Footer() {
   return (
     <footer className="relative border-t border-white/5">
       <div className="mx-auto max-w-6xl px-6 py-16">
-        <div className="grid sm:grid-cols-3 gap-12">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div>
             <Image
