@@ -6,9 +6,36 @@ import { Pods } from "@/components/sections/pods";
 import { Footer } from "@/components/sections/footer";
 import { WaitlistCta } from "@/components/sections/waitlist-cta";
 
+const JSON_LD = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://watchpod.com/#organization",
+      name: "WatchPod",
+      url: "https://watchpod.com",
+      logo: "https://watchpod.com/logo.svg",
+      email: "feedback@watchpod.com",
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://watchpod.com/#website",
+      url: "https://watchpod.com",
+      name: "WatchPod",
+      description:
+        "The one-stop platform to figure out what to watch, with one or many people.",
+      publisher: { "@id": "https://watchpod.com/#organization" },
+    },
+  ],
+};
+
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }}
+      />
       <Navbar />
       <main className="snap-y snap-proximity">
         <section id="hero" className="snap-start min-h-screen">
