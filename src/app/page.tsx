@@ -4,7 +4,7 @@ import { HowItWorks } from "@/components/sections/how-it-works";
 import { Features } from "@/components/sections/features";
 import { Pods } from "@/components/sections/pods";
 import { Footer } from "@/components/sections/footer";
-import { WaitlistCta } from "@/components/sections/waitlist-cta";
+import { DownloadCta } from "@/components/sections/download-cta";
 
 const JSON_LD = {
   "@context": "https://schema.org",
@@ -50,8 +50,8 @@ export default function Home() {
         <section id="pods" className="snap-start min-h-screen">
           <Pods />
         </section>
-        <section id="waitlist" className="snap-start">
-          <WaitlistCta />
+        <section id="download" className="snap-start">
+          <DownloadCta />
         </section>
         <section>
           <Footer />

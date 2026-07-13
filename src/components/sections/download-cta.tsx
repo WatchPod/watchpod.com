@@ -1,6 +1,6 @@
 import { StoreButtons } from "@/components/ui/store-buttons";
 
-export function WaitlistCta() {
+export function DownloadCta() {
   return (
     <section className="relative py-24 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-noir-800 to-noir-900" />
