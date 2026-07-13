@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.watchpod.android",
+      "sha256_cert_fingerprints": [
+        "8F:82:07:0A:4E:1E:95:93:2B:20:B2:5D:1D:38:02:AE:8B:F7:9E:AA:2D:03:43:68:64:FB:CD:10:99:92:0A:6B",
+        "C8:9B:6E:33:97:86:E3:00:B6:FC:44:A2:FC:E8:0E:19:A6:7B:88:DB:25:55:D4:58:27:87:33:79:67:26:74:24"
+      ]
+    }
+  }
+]

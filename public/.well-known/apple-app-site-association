@@ -1,0 +1,8 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      { "appID": "UF93G6LFWJ.com.watchpod.app", "paths": ["/collections/*", "/invite", "/invite/*", "/"] }
+    ]
+  }
+}
