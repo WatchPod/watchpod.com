@@ -1,0 +1,9 @@
+# Netlify serves files in public/ directly from its CDN and infers the
+# Content-Type from the file extension. The extension-less AASA file would
+# otherwise be served as text/plain; force application/json so it is fully
+# spec-compliant. (assetlinks.json already gets application/json from its
+# extension, but we set it explicitly here for both.)
+/.well-known/apple-app-site-association
+  Content-Type: application/json
+/.well-known/assetlinks.json
+  Content-Type: application/json
