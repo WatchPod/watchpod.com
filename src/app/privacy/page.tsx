@@ -182,7 +182,104 @@ export default function PrivacyPage() {
               </ul>
             </Section>
 
-            <Section title="6. Security">
+            <Section title="6. Pod+ Paid Subscription">
+              <p>
+                WatchPod offers <strong className="text-white font-semibold">Pod+</strong>, an optional paid subscription tier that
+                provides access to additional features, functionality, and
+                benefits within the WatchPod service.
+              </p>
+
+              <Subsection title="Subscription and Payment Information">
+                <p>
+                  When you purchase or subscribe to Pod+, your payment is
+                  processed by the applicable app store, such as the Apple App
+                  Store or Google Play Store. WatchPod does not directly receive
+                  or store your full credit or debit card information when your
+                  purchase is processed by these third parties.
+                </p>
+                <p>
+                  We receive limited information related to your subscription,
+                  such as your subscription status, subscription plan, purchase
+                  or renewal date, expiration date, transaction or subscription
+                  identifier, and whether a purchase was successfully completed,
+                  renewed, canceled, or refunded.
+                </p>
+                <p>
+                  Your payment provider&rsquo;s collection and use of payment
+                  information is governed by its own privacy policy and terms.
+                </p>
+              </Subsection>
+
+              <Subsection title="How We Use Pod+ Information">
+                <p>
+                  We use information associated with your Pod+ subscription to:
+                </p>
+                <ul className="list-disc list-outside ml-6 mt-3 space-y-1.5 text-white/60">
+                  <li>Provide and maintain your Pod+ features and benefits;</li>
+                  <li>
+                    Verify your subscription status and eligibility for paid
+                    features;
+                  </li>
+                  <li>
+                    Process and administer subscription changes, renewals,
+                    cancellations, and refunds, as applicable;
+                  </li>
+                  <li>
+                    Provide customer support and troubleshoot subscription-related
+                    issues;
+                  </li>
+                  <li>
+                    Prevent fraud, abuse, or unauthorized access to paid
+                    features;
+                  </li>
+                  <li>
+                    Understand how Pod+ features are used and improve WatchPod
+                    and Pod+; and
+                  </li>
+                  <li>
+                    Comply with applicable legal, accounting, tax, and
+                    regulatory requirements.
+                  </li>
+                </ul>
+              </Subsection>
+
+              <Subsection title="Cancellation and Expiration">
+                <p>
+                  You may cancel your Pod+ subscription through the app at any
+                  time or the platform or payment provider through which you
+                  purchased it. Canceling your subscription does not delete your
+                  WatchPod account or the information associated with your
+                  account.
+                </p>
+                <p>
+                  If your Pod+ subscription expires or is canceled, you will
+                  lose access to Pod+ features at the end of the applicable
+                  subscription period. We will retain information relating to
+                  your subscription and prior use of Pod+ as described in this
+                  Privacy Policy, so you can re-start where you left off, if you
+                  choose.
+                </p>
+                <p>
+                  <strong className="text-white font-semibold">All Pod+ subscription payments are final and non-refundable.</strong>{" "}
+                  Canceling a Pod+ subscription stops future renewals but does
+                  not provide a refund or credit for any portion of the current
+                  subscription period. You will continue to have access to Pod+
+                  through the end of your already-paid subscription period.
+                </p>
+              </Subsection>
+
+              <Subsection title="Changes to Pod+">
+                <p>
+                  We may modify the features and benefits included with Pod+
+                  from time to time. If a change affects how we collect, use, or
+                  share your personal information in a manner that requires an
+                  update to this Privacy Policy or notice under applicable law,
+                  we will provide the appropriate notice.
+                </p>
+              </Subsection>
+            </Section>
+
+            <Section title="7. Security">
               <p>We apply industry-standard protections:</p>
               <ul className="list-disc list-outside ml-6 mt-3 space-y-1.5 text-white/60">
                 <li>Encrypted data transmission (HTTPS)</li>
@@ -194,21 +291,21 @@ export default function PrivacyPage() {
               </p>
             </Section>
 
-            <Section title="7. Children's Privacy">
+            <Section title="8. Children's Privacy">
               <p>
                 WatchPod is not intended for users under 13. We do not
                 knowingly collect data from children under this age.
               </p>
             </Section>
 
-            <Section title="8. International Data Use">
+            <Section title="9. International Data Use">
               <p>
                 Your data may be processed in locations outside your country,
                 following applicable laws and safeguards.
               </p>
             </Section>
 
-            <Section title="9. Third-Party Links">
+            <Section title="10. Third-Party Links">
               <p>
                 External movie or media links in WatchPod may lead to
                 third-party services. Their privacy practices are independent
@@ -216,14 +313,14 @@ export default function PrivacyPage() {
               </p>
             </Section>
 
-            <Section title="10. Changes to This Policy">
+            <Section title="11. Changes to This Policy">
               <p>
                 We may update this policy periodically. Your continued use
                 signifies acceptance of these updates.
               </p>
             </Section>
 
-            <Section title="11. Contact Us">
+            <Section title="12. Contact Us">
               <p>
                 For privacy questions or requests:{" "}
                 <a
