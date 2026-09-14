@@ -24,8 +24,20 @@ export function proxy(request: NextRequest) {
     const inviteCode = pathname.startsWith("/invite/")
       ? pathname.slice("/invite/".length)
       : null;
-    const destination = inviteCode
-      ? `${PLAY_STORE_URL}&referrer=${encodeURIComponent(`code=${inviteCode}`)}`
+    // Same trick for /collections/<id> so the app can open the collection the
+    // user tapped once it is installed.
+    const collectionId = pathname.startsWith("/collections/")
+      ? pathname.slice("/collections/".length).split("/")[0]
+      : null;
+
+    const referrer = inviteCode
+      ? `code=${inviteCode}`
+      : collectionId
+        ? `collection_id=${collectionId}`
+        : null;
+
+    const destination = referrer
+      ? `${PLAY_STORE_URL}&referrer=${encodeURIComponent(referrer)}`
       : PLAY_STORE_URL;
     return NextResponse.redirect(destination);
   }
