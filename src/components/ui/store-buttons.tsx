@@ -1,3 +1,13 @@
+/**
+ * `data-wp-store="ios"` on the App Store link is the hook for the deferred-link
+ * script in app/layout.tsx: on a /collections/<id> or /invite/<code> URL that
+ * script copies the page URL to the clipboard before handing off to the App
+ * Store, so the link survives the install (iOS has no deferred deep linking).
+ *
+ * The copy deliberately lives in that pre-hydration script rather than an
+ * onClick here, so this stays a server component and a tap that lands before
+ * React hydrates still copies. See proxy.ts for how these URLs reach this page.
+ */
 const APP_STORE_URL = "https://apps.apple.com/app/watchpod/id6761643517";
 const PLAY_STORE_URL =
   "https://play.google.com/store/apps/details?id=com.watchpod.android";
@@ -18,6 +28,7 @@ export function StoreButtons({ className = "" }: StoreButtonsProps) {
           rel="noopener noreferrer"
           className="group flex items-center gap-3 rounded-xl bg-black hover:bg-noir-800 border border-white/10 hover:border-white/20 px-5 py-3 transition-colors w-56"
           aria-label="Download on the App Store"
+          data-wp-store="ios"
         >
           <svg
             width="28"
